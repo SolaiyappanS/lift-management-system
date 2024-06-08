@@ -1,4 +1,65 @@
 body {
   background-color: #212121;
   color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  min-width: 99vw;
+  width: max-content;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#liftContainer {
+  margin: 5rem;
+}
+
+.lift {
+  width: 4rem;
+  height: 6rem;
+  display: inline-block;
+  background-color: #fff1;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
+  position: relative;
+  transition: 500ms;
+}
+
+.lift-button,
+.up-button,
+.down-button,
+.floor-number {
+  font-size: 2.5rem;
+  position: absolute;
+  color: #fff5;
+}
+
+.floor-number {
+  color: #fff9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.up-button {
+  cursor: pointer;
+  rotate: -90deg;
+  bottom: 60%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+
+.down-button {
+  cursor: pointer;
+  rotate: 90deg;
+  top: 60%;
+  right: 63%;
+  transform: translate(-50%, -50%);
+}
+
+.lift-button:hover,
+.up-button:hover,
+.down-button:hover {
+  color: #fff9;
 }
