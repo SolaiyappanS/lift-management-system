@@ -13,6 +13,7 @@ body::-webkit-scrollbar {
 
 #liftContainer {
   margin: 5rem;
+  margin-top: 1rem;
 }
 
 .lift {
@@ -30,7 +31,7 @@ body::-webkit-scrollbar {
 .up-button,
 .down-button,
 .floor-number {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   position: absolute;
   color: #fff5;
 }
@@ -40,6 +41,40 @@ body::-webkit-scrollbar {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.lift-button {
+  color: #033;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  max-width: 3.5rem;
+  background-color: #0000;
+  text-align: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.counter {
+  font-size: 1.6rem;
+  color: #fff;
+  max-width: 3.5rem;
+  background-color: #0000;
+  text-align: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+h2,
+.counter {
+  display: inline-block;
+}
+
+.lift-button:disabled {
+  color: #0000;
+  cursor: default;
 }
 
 .up-button {
@@ -58,8 +93,11 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
 }
 
-.lift-button:hover,
 .up-button:hover,
 .down-button:hover {
   color: #fff9;
+}
+
+.no-bg {
+  background-color: #faa1;
 }
