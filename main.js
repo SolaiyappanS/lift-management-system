@@ -154,9 +154,9 @@ const resetLift = (i, j) => {
 
 const moveLift = (liftNumber, destinationFloor, liftDirection) => {
   if (
-    destinationFloor < 0 ||
-    destinationFloor > floorCount ||
-    liftNumber == (destinationFloor - 1) % liftCount
+    destinationFloor*1 < 0 ||
+    destinationFloor*1 > floorCount*1 ||
+    liftNumber*1 == (destinationFloor - 1) % liftCount
   ) {
     $("#lift_number_" + liftsCurrentFloor[liftNumber] + "_" + liftNumber).val(
       liftsCurrentFloor[liftNumber]
