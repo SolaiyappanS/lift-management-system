@@ -44,15 +44,15 @@ $(document).ready(function () {
 const updateCounts = (floorCount1, liftCount1) => {
   if (liftCount1 * 1 > floorCount1 * 1) {
     alert("Lift count should not be greater than floor count");
-    $("#floor_count").val(floorCount);
-    $("#lift_count").val(liftCount);
+    $("#floor_count").val(floorCount * 1);
+    $("#lift_count").val(liftCount * 1);
   } else {
-    floorCount = floorCount1;
-    liftCount = liftCount1;
+    floorCount = floorCount1 * 1;
+    liftCount = liftCount1 * 1;
     recentLift = -1;
 
-    workingLifts.fill(false);
-    liftsCurrentFloor.fill(0);
+    workingLifts = new Array(liftCount).fill(false);
+    liftsCurrentFloor = new Array(liftCount).fill(0);
     initializeLifts();
     highlightCurrentLifts();
   }
@@ -154,9 +154,9 @@ const resetLift = (i, j) => {
 
 const moveLift = (liftNumber, destinationFloor, liftDirection) => {
   if (
-    destinationFloor*1 < 0 ||
-    destinationFloor*1 > floorCount*1 ||
-    liftNumber*1 == (destinationFloor - 1) % liftCount
+    destinationFloor * 1 < 0 ||
+    destinationFloor * 1 > floorCount * 1 ||
+    liftNumber * 1 == (destinationFloor - 1) % liftCount
   ) {
     $("#lift_number_" + liftsCurrentFloor[liftNumber] + "_" + liftNumber).val(
       liftsCurrentFloor[liftNumber]
